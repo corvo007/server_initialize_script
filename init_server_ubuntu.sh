@@ -10,7 +10,7 @@ changeDockerSource() {
     sudo cat>/etc/docker/daemon.json<<EOF
 {
   "registry-mirrors" : [
-    "https://registry.docker-cn.com",
+    "https://6pgyz01d.mirror.aliyuncs.com",
     "https://docker.mirrors.ustc.edu.cn"
   ],
   "debug" : true
@@ -55,10 +55,11 @@ sudo apt-get install python3-venv -y
 
 if [ -x "$(command -v docker)" ]; then
     echo "docker found, skip installation"
+    changeDockerSource
 else
     echo "installing docker..."
     installDocker
-changeDockerSource
+    changeDockerSource
 installDockerCompose
 fi
 
@@ -94,4 +95,5 @@ echo "I. use screen -r backend enter screen session."
 echo "II. configure ./backend_config.json"
 echo "III. use source ./bin/activate to activate pyenv."
 echo "IV. use python3 __init__.py to run."
+
 
