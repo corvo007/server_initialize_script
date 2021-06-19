@@ -44,6 +44,7 @@ Now starting installation...
 
 echo "starting update and install system packages..."
 
+sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install build-essential -y
 sudo apt-get install -y  zlib1g-dev yasm screen 
