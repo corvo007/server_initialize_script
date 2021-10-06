@@ -64,7 +64,7 @@ installDockerCompose
 fi
 
 echo "Pulling image..."
-docker pull pcrbot/gocqhttp:ffmpeg
+docker pull pcrbot/gocqhttp:1.0.0-beta4-ffmpeg # specify version
 
 echo "Starting docker daemon"
 sudo systemctl start docker
