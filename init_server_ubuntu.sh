@@ -64,7 +64,7 @@ installDockerCompose
 fi
 
 echo "Pulling image..."
-docker pull pcrbot/gocqhttp:1.0.0-beta4-ffmpeg # specify version
+docker pull ghcr.io/mrs4s/go-cqhttp:1.0.0-beta8-fix2 # specify version
 
 echo "Starting docker daemon"
 sudo systemctl start docker
